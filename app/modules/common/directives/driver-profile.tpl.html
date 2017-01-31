@@ -1,0 +1,11 @@
+<div class="panel panel-default ">
+    <div class="panel-body text-center">
+        <img ng-show="driverProfCtrl.driver" ng-src="img/drivers/{{driverProfCtrl.driver.Driver.driverId}}.png"/>
+        <img ng-show="driverProfCtrl.driver" ng-src="img/flags/{{driverProfCtrl.driver.Driver.nationality}}.png"/><br/>
+        {{driverProfCtrl.driver.Driver.givenName}} {{driverProfCtrl.driver.Driver.familyName}}
+        Country: {{driverProfCtrl.driver.Driver.nationality}} <br/>
+        Team: {{driverProfCtrl.driver.Constructors[0].name}}<br/>
+        Birth: {{driverProfCtrl.driver.Driver.dateOfBirth}}<br/>
+        <a ng-href="{{driverProfCtrl.driver.Driver.url}}" target="_blank">Biography</a>
+    </div>
+</div>

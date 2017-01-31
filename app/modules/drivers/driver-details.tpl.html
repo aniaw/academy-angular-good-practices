@@ -1,0 +1,33 @@
+<div class="container">
+    <nav class="page-header">
+        <a class="btn btn-primary" href="./drivers">Drivers list</a>
+    </nav>
+    <section id="detail" class="container center-div">
+        <driver-profile name="{{driverCtrl.name}}"></driver-profile>
+    </section>
+    <article>
+        <table class="table table-bordered table-condensed">
+            <thead>
+            <tr>
+                <th colspan="5">Formula 1 2013 Results</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Round</td>
+                <td>Grand Prix</td>
+                <td>Team</td>
+                <td>Grid</td>
+                <td>Race</td>
+            </tr>
+            <tr ng-repeat="race in driverCtrl.races">
+                <td>{{race.round}}</td>
+                <td><img ng-src="img/flags/{{race.Circuit.Location.country}}.png"/> {{race.raceName}}</td>
+                <td>{{race.Results[0].Constructor.name}}</td>
+                <td>{{race.Results[0].grid}}</td>
+                <td>{{race.Results[0].position}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+</div>

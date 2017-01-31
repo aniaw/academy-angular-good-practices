@@ -22,7 +22,7 @@ module.exports = function (grunt)
                         options: {
                             livereload: '<%= connect.options.livereload %>'
                         },
-                        files: ['<%= config.app %>/**/*.html', '<%= config.app %>/**/*.js']
+                        files: ['<%= config.app %>/**/**/*.html', '<%= config.app %>/**/**/*.js']
                     }
                 },
 

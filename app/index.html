@@ -7,14 +7,18 @@
     <link href="style/style.css" rel="stylesheet">
 </head>
 
-<body ng-app="app">
+<body data-ng-app="app">
 <ng-view></ng-view>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="js/app.js"></script>
-<script src="js/services.js"></script>
-<script src="js/directives.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/controllers.js"></script>
+<script src="app.js"></script>
+<script src="app.config.js"></script>
+<script src="app.routes.js"></script>
+<script src="modules/common/directives/driver-profile.directives.js"></script>
+<script src="modules/common/services/ergastAPI.factory.js"></script>
+<script src="modules/common/filters/search.filter.js"></script>
+
+<script src="modules/drivers/drivers.controller.js"></script>
+<script src="modules/drivers/driver-details.controllers.js"></script>
 </body>
 </html>
